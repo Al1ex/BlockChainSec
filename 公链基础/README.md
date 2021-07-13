@@ -12,7 +12,7 @@
 
 [以太坊区块同步](https://mp.weixin.qq.com/s?__biz=Mzg4MTU4NTc2Nw==&mid=2247485742&idx=1&sn=2292e97813f444e8ecd1a3bf752de87a&chksm=cf62f226f8157b30ecf45d8822a6ebf6c0e20233dc2385779dcbf2394410e53ae12e20a617ad&scene=178&cur_album_id=1841133730610888705#rd)
 
-[以太坊交易处理][https://mp.weixin.qq.com/s/A5HMfOMxJ91d7SeX6fmEiQ]
+[以太坊交易处理](https://mp.weixin.qq.com/s/A5HMfOMxJ91d7SeX6fmEiQ)
 
 [以太坊虚拟机]
 
