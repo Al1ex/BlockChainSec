@@ -39,7 +39,7 @@
 
 [CVE-list](https://en.bitcoin.it/wiki/Common_Vulnerabilities_and_Exposures)
 
-![img](img/cve.png)
+![img](img/CVE.png)
 
 [talosintelligence](https://talosintelligence.com/vulnerability_reports#disclosed)
 
