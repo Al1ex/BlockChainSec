@@ -1,4 +1,4 @@
-### 跨链技术
+## 跨链技术
 
 [Cosmos跨链项目介绍](https://cloud.tencent.com/developer/article/1441474)
 
