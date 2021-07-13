@@ -1,0 +1,20 @@
+Step 1：下载Lightcoin合约代码之后在本地Remix中进行部署调试(这里需要改一下合约中owner地址便于调试)，相关账户地址信息如下所示：
+        管理者：0x5B38Da6a701c568545dCfcB03FcB875f56beddC4
+        攻击者1：0xAb8483F64d9C6d1EcF9b849Ae677dD3315835cb2 
+        攻击者2：0x4B20993Bc481177ec7E8f571ceCaE8A9e22C02db
+
+Step 2：以管理者身份调用approve函数给予攻击者1一定的转账额度
+approve:"0xAb8483F64d9C6d1EcF9b849Ae677dD3315835cb2",10000
+
+Step 3：使用allowance 查看转账额度：
+"0x5B38Da6a701c568545dCfcB03FcB875f56beddC4","0xAb8483F64d9C6d1EcF9b849Ae677dD3315835cb2"
+
+Step 4：之后切换为攻击者1身份，并通过攻击者1使用transferFrom向攻击者2进行转账操作
+"0x5B38Da6a701c568545dCfcB03FcB875f56beddC4","0x4B20993Bc481177ec7E8f571ceCaE8A9e22C02db",10000
+
+Step 5：攻击者1继续使用:transferFrom向攻击者2进行转账操作，仍然能转账成功，因为 allowed[_from][msg.sender]没有发生变化
+"0x5B38Da6a701c568545dCfcB03FcB875f56beddC4","0x4B20993Bc481177ec7E8f571ceCaE8A9e22C02db",10000
+
+
+Step 6：之后进行资产确认，发现攻击者2的余额增加了
+0x4B20993Bc481177ec7E8f571ceCaE8A9e22C02db

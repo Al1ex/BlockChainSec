@@ -1,0 +1,22 @@
+Step 1:首先，下载CountryCoin合约然后在Remix中进行部署分析调试(在构造函数中给msg.sender赋一些token)，相关地址如下
+
+管理者： 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4
+攻击者1：0xAb8483F64d9C6d1EcF9b849Ae677dD3315835cb2
+攻击者2：0x4B20993Bc481177ec7E8f571ceCaE8A9e22C02db
+
+Step 2：在这里我们首先通过管理者地址给攻击者1地址打一定数量的代币进去，来模拟攻击者1充值token：
+0xAb8483F64d9C6d1EcF9b849Ae677dD3315835cb2,100000000000000
+
+Step 3：接下来我们的攻击就是让第二个账户溢出，之后使用攻击者2给予攻击者1一定的转账额度权限
+
+approve: "0xAb8483F64d9C6d1EcF9b849Ae677dD3315835cb2",10000
+
+Step 4：切换回攻击者1，然后使用transferFrom向自己进行转账操作
+transferFrom： 
+"0x4B20993Bc481177ec7E8f571ceCaE8A9e22C02db","0xAb8483F64d9C6d1EcF9b849Ae677dD3315835cb2",10000
+
+
+Step 5：攻击者2地址上余额原本为0，但经过减法计算下溢变为了一个极大值
+
+
+

@@ -1,0 +1,15 @@
+Step 1:部署IDMoney合约
+
+Step 2：向IDMoney合约存款25ETH
+
+Step 3:部署攻击合约地址(初始化给定2eth到合约)
+
+Step 4：在攻击合约中调用setVictim函数设置存在漏洞的合约地址
+
+Step 5：调用StartAttack开始攻击
+
+    amout为1eth：1000000000000000000
+
+Step  6：调用Stop Attack终止攻击
+
+
